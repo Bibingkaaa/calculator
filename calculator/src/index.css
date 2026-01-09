@@ -32,19 +32,19 @@ html, body, #root {
 
 .calculator {
   background-color: white;
-  padding: 1rem;
-  border-radius: 0.5rem;
+  padding: 2rem;
+  border-radius: 0.75rem;
 
 }
 .screens{
-  padding: 0.5rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: #333;
   color: whitesmoke;
-  min-height: 5rem;
-  border-radius: 0.3rem;
+  min-height: 7rem;
+  border-radius: 0.5rem;
 }
 
 .screens span{
@@ -52,15 +52,15 @@ html, body, #root {
 }
 .second-screen {
   color: lightgray;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
 }
 .second-screen {
-  font-size: 2rem;
+  font-size: 2.6rem;
 }
 
 .inputsWrapper{
   display:grid;
-  grid-template-columns: repeat(4, 50px);
+  grid-template-columns: repeat(4, 70px);
   margin-top: 1rem;
   gap: 0.1rem;
 }
@@ -94,9 +94,9 @@ button {
 
   border: 1px solid transparent;
   padding: 0;
-  height: 50px;           /* choose any size you like */
+  height: 70px;           /* larger button height */
   aspect-ratio: 336 / 350;
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: 500;
   font-family: inherit;
   background-color: #c9b7b7;
