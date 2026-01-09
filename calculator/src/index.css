@@ -1,18 +1,77 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import "tailwindcss";
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+:root {
+ font-family: 'Pixelify Sans', var(--font-sans);
+  font-weight: 400;
+}
+
+.container {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: #121212;
+  margin: 0;
+  padding: 0;
+}
+
+.calculator {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+
+}
+.screens{
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #333;
+  color: whitesmoke;
+  min-height: 5rem;
+  border-radius: 0.3rem;
+}
+
+.screens span{
+  text-align: right;
+}
+.second-screen {
+  color: lightgray;
+  font-size: 1.1rem;
+}
+.second-screen {
+  font-size: 2rem;
+}
+
+.inputsWrapper{
+  display:grid;
+  grid-template-columns: repeat(4, 65px);
+  margin-top: 1rem;
+  gap: 1px;
+}
+@font-face {
+  font-family: 'Pixelify Sans';
+  src: url('./assets/fonts/PixelifySans-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  /* This prevents the browser from blurring the pixels */
+  font-display: swap;
+}
 a {
   font-weight: 500;
   color: #646cff;
@@ -24,10 +83,6 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
 h1 {
@@ -38,11 +93,13 @@ h1 {
 button {
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+   padding: 0;
+  height: 50px;           /* choose any size you like */
+  aspect-ratio: 336 / 350;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #c9b7b7;
   cursor: pointer;
   transition: border-color 0.25s;
 }
