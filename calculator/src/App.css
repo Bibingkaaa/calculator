@@ -8,16 +8,62 @@
 	border: none;
 }
 
+.img-button-1 {
+	background-image: url("/1.png");
+}
+.img-button-1:active {
+	background-image: url("/1_1.png");
+}
+.img-button-2 {
+	background-image: url("/2.png");
+}
+.img-button-2:active {
+	background-image: url("/2_1.png");
+}
+.img-button-3 {
+	background-image: url("/3.png");
+}
+.img-button-3:active {
+	background-image: url("/3_1.png");
+}
+.img-button-4 {
+	background-image: url("/4.png");
+}
+.img-button-4:active  {
+	background-image: url("/4_1.png");
+}
+.img-button-5 {
+	background-image: url("/5.png");
+}
+.img-button-5:active  {
+	background-image: url("/5_1.png");
+}
+.img-button-6 {
+	background-image: url("/6.png");
+}
+.img-button-6:active  {
+	background-image: url("/6_1.png");
+}
 .img-button-7 {
 	background-image: url("/7.png");
+}
+.img-button-7:active  {
+	background-image: url("/7_1.png");
 }
 
 .img-button-8 {
 	background-image: url("/8.png");
 }
+.img-button-8:active  {
+	background-image: url("/8_1.png");
+}
 
 .img-button-9 {
 	background-image: url("/9.png");
+}
+
+.img-button-9:active {
+	background-image: url("/9_1.png");
 }
 
 .img-button span,

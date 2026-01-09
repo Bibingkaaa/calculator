@@ -10,7 +10,7 @@ export default function App() {
   const [display, setDisplay] = useState("0");
 
   const handleNumber = (number) => {
-    if(calc.secondOperand !== null && calc.secondOperand.length >= 14) return;
+    if(calc.secondOperand !== null && calc.secondOperand.length >= 10) return;
     if(calc.secondOperand === "0" && number === "0") return;  
     if(calc.secondOperand?.includes(",") && number === ",")return;
     let l_calc={}
@@ -182,13 +182,43 @@ export default function App() {
             9
           </button>
           <button className="featured" onClick={() => handleOperator("x")}>x</button>
-          <button onClick={()=>handleNumber("4")}>4</button>
-          <button onClick={()=>handleNumber("5")}>5</button>
-          <button onClick={()=>handleNumber("6")}>6</button>
+           <button
+            className="img-button img-button-4"
+            onClick={() => handleNumber("4")}
+          >
+            4
+          </button>
+          <button
+            className="img-button img-button-5"
+            onClick={() => handleNumber("5")}
+          >
+            5
+          </button>
+          <button
+            className="img-button img-button-6"
+            onClick={() => handleNumber("6")}
+          >
+            6
+          </button>
           <button className="featured" onClick={() => handleOperator("-")}>-</button>
-          <button onClick={()=>handleNumber("1")}>1</button>
-          <button onClick={()=>handleNumber("2")}>2</button>
-          <button onClick={()=>handleNumber("3")}>3</button>
+          <button
+            className="img-button img-button-1"
+            onClick={() => handleNumber("1")}
+          >
+            3
+             </button>
+            <button
+            className="img-button img-button-2"
+            onClick={() => handleNumber("2")}
+          >
+            3
+             </button>
+          <button
+            className="img-button img-button-3"
+            onClick={() => handleNumber("3")}
+          >
+            3
+          </button>
           <button className="featured" onClick={() => handleOperator("÷")}>÷</button>
           <button onClick={()=>handleNumber(",")}>,</button>
           <button onClick={()=>handleNumber("0")}>0</button>
