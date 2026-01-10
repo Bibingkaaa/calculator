@@ -21,38 +21,39 @@ html, body, #root {
 
 .container {
   display:flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   min-width: 100vw;
   background-color: #121212;
+  background-image: url("/bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   margin: 0;
   padding: 0;
 }
 
 .calculator {
-  background-color: white;
   padding: 2rem;
-  border-radius: 0.75rem;
-
 }
 .screens{
+  aspect-ratio: 418 / 187;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #333;
-  color: whitesmoke;
+  color: #7b9165;
   min-height: 7rem;
-  border-radius: 0.5rem;
 }
 
 .screens span{
   text-align: right;
 }
 .second-screen {
-  color: lightgray;
-  font-size: 1.4rem;
+  color: #5d6e4c;
+  font-size: 1.5rem;
 }
 .second-screen {
   font-size: 2.6rem;
@@ -61,7 +62,8 @@ html, body, #root {
 .inputsWrapper{
   display:grid;
   grid-template-columns: repeat(4, 70px);
-  margin-top: 1rem;
+  margin-top: 0.6rem;
+  padding-bottom: 1.5rem;
   gap: 0.1rem;
 }
 @font-face {
@@ -70,6 +72,13 @@ html, body, #root {
   font-weight: normal;
   font-style: normal;
   /* This prevents the browser from blurring the pixels */
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PressStart2P';
+  src: url('./assets/fonts/PressStart2P.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
   font-display: swap;
 }
 a {

@@ -66,6 +66,126 @@
 	background-image: url("/9_1.png");
 }
 
+.img-button-c {
+	background-image: url("/c.png");
+}
+
+.img-button-c:active {
+	background-image: url("/c_1.png");
+}
+
+.img-button-sign {
+	background-image: url("/sign.png");
+}
+
+.img-button-percent:active {
+	background-image: url("/percent_1.png");
+}
+.img-button-percent {
+	background-image: url("/percent.png");
+}
+
+.img-button-sign:active {
+	background-image: url("/sign_1.png");
+}
+.img-button-plus {
+	background-image: url("/plus.png");
+}
+
+.img-button-plus:active {
+	background-image: url("/plus_1.png");
+}
+
+.img-button-x {
+	background-image: url("/times.png");
+}
+
+.img-button-x:active {
+	background-image: url("/times_1.png");
+}
+
+.img-button-coma {
+	background-image: url("/coma.png");
+}
+
+.img-button-coma:active {
+	background-image: url("/coma_1.png");
+}
+
+.img-button-divide {
+	background-image: url("/divide.png");
+}
+
+.img-button-divide:active {
+	background-image: url("/divide_1.png");
+}
+
+.img-button-minus {
+	background-image: url("/minus.png");
+}
+
+.img-button-minus:active {
+	background-image: url("/minus_1.png");
+}
+
+.img-button-minus {
+	background-image: url("/minus.png");
+}
+
+.img-button-minus:active {
+	background-image: url("/minus_1.png");
+}
+.img-button-equals {
+	background-image: url("/equal.png");
+}
+.img-button-equals:active {
+	background-image: url("/equal_1.png");
+}
+
+.img-button-backspace {
+	background-image: url("/backspace.png");
+}
+.img-button-backspace:active {
+	background-image: url("/backspace_1.png");
+}
+.img-button-0 {
+	background-image: url("/0.png");
+}
+.img-button-0:active {
+	background-image: url("/0_1.png");
+}
+
+.screens {
+	background-image: url("/screen.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.calculator {
+	background-image: url("/calculator.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.header {
+	text-align: center;
+	
+	margin-bottom: 1.5rem;
+}
+
+.header h1 {
+	margin: 0;
+	color: rgb(87, 64, 64);
+	font-size: 1.5rem;
+	font-family: "PressStart2P", system-ui, sans-serif;
+}
+
+.header p {
+	margin: 0.25rem 0 0;
+	color: rgb(80, 62, 62);
+	font-size: 1.5rem;
+}
 .img-button span,
 .img-button {
 	color: transparent;

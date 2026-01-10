@@ -1,6 +1,41 @@
 import { useState } from 'react'
 import './App.css'
 
+function formatResult(value) {
+  if (typeof value !== 'number' || !isFinite(value)) {
+    return value.toString();
+  }
+
+  const maxLen = 10;
+  const isNegative = value < 0;
+  const sign = isNegative ? '-' : '';
+  const abs = Math.abs(value);
+
+  for (let decimals = 8; decimals >= 0; decimals--) {
+    let rounded = abs.toFixed(decimals);
+    if (decimals > 0) {
+      rounded = rounded.replace(/\.0+$/, '').replace(/\.([^0]*)0+$/, '.$1');
+      rounded = rounded.replace(/\.$/, '');
+    }
+    let str = sign + rounded.replace('.', ',');
+    if (str.length <= maxLen) {
+      return str;
+    }
+  }
+
+  const intStr = Math.trunc(abs).toString();
+  let intResult = sign + intStr;
+  if (intResult.length <= maxLen) {
+    return intResult;
+  }
+
+  let exp = value.toExponential(3).replace('.', ',');
+  if (exp.length > maxLen) {
+    exp = exp.slice(0, maxLen);
+  }
+  return exp;
+}
+
 export default function App() {
   const [calc, setCalc] = useState({
     firstOperand: null,
@@ -92,8 +127,8 @@ export default function App() {
       default:
         result = second;
     }
-    
-    const resultStr = result === "Error" ? "Error" : result.toString().replace(".", ",");
+
+    const resultStr = result === "Error" ? "Error" : formatResult(result);
     setDisplay(calc.firstOperand.toString().replace(".", ",") + " " + calc.operator + " " + calc.secondOperand);
     
     setCalc({
@@ -145,12 +180,16 @@ export default function App() {
     const result = value / 100;
     setCalc({
       ...calc,
-      secondOperand: result.toString().replace(".", ","),
+      secondOperand: formatResult(result),
     });
   };
 
   return (
     <div className="container">
+      <div className="header">
+        <h1>My Calculator App</h1>
+        <p>Prepared by: Bibingkinitan</p>
+      </div>
 
       <div className="calculator">
         <div className="screens">
@@ -159,71 +198,81 @@ export default function App() {
         </div>
 
         <div className="inputsWrapper">
-          <button className="featured" onClick={handleClear}>C</button>
-          <button className="featured" onClick={handlePlusMinus}>+/-</button>
-          <button className="featured" onClick={handlePercent}>%</button>
-          <button className="featured" onClick={() => handleOperator("+")}>+</button>
+          <button
+            className="img-button img-button-c"
+            onClick={() => handleClear("c")}
+          >
+           
+          </button>
+          <button className="img-button img-button-sign" onClick={handlePlusMinus}></button>
+          <button className="img-button img-button-percent" onClick={handlePercent}></button>
+          <button className="img-button img-button-plus" onClick={() => handleOperator("+")}></button>
           <button
             className="img-button img-button-7"
             onClick={() => handleNumber("7")}
           >
-            7
+           
           </button>
           <button
             className="img-button img-button-8"
             onClick={() => handleNumber("8")}
           >
-            8
+           
           </button>
           <button
             className="img-button img-button-9"
             onClick={() => handleNumber("9")}
           >
-            9
+          
           </button>
-          <button className="featured" onClick={() => handleOperator("x")}>x</button>
+          <button className="img-button img-button-x" onClick={() => handleOperator("x")}></button>
            <button
             className="img-button img-button-4"
             onClick={() => handleNumber("4")}
           >
-            4
+           
           </button>
           <button
             className="img-button img-button-5"
             onClick={() => handleNumber("5")}
           >
-            5
+           
           </button>
           <button
             className="img-button img-button-6"
             onClick={() => handleNumber("6")}
           >
-            6
+            
           </button>
-          <button className="featured" onClick={() => handleOperator("-")}>-</button>
+          <button className="img-button img-button-minus" onClick={() => handleOperator("-")}></button>
           <button
             className="img-button img-button-1"
             onClick={() => handleNumber("1")}
           >
-            3
+            
              </button>
             <button
             className="img-button img-button-2"
             onClick={() => handleNumber("2")}
           >
-            3
+            
              </button>
           <button
             className="img-button img-button-3"
             onClick={() => handleNumber("3")}
           >
-            3
+           
           </button>
-          <button className="featured" onClick={() => handleOperator("÷")}>÷</button>
-          <button onClick={()=>handleNumber(",")}>,</button>
-          <button onClick={()=>handleNumber("0")}>0</button>
-          <button onClick={handleBackspace}>⌫</button>
-          <button className="featured" onClick={handleEquals}>=</button>
+          <button className="img-button img-button-divide" onClick={() => handleOperator("÷")}></button>
+           <button
+            className="img-button img-button-coma"
+            onClick={() => handleNumber(",")}
+          >
+           
+          </button>
+          <button className="img-button img-button-0" onClick={()=>handleNumber("0")}></button>
+          <button className="img-button img-button-backspace" onClick={handleBackspace}></button>
+          <button className="img-button img-button-equals" onClick={handleEquals}>=</button>
         </div>
       </div>
     </div>
